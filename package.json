@@ -1,0 +1,38 @@
+{
+        "name": "@i18n/root",
+        "author": "tseijp",
+        "version": "0.1.0",
+        "license": "MIT",
+        "private": true,
+        "sideEffects": false,
+        "scripts": {
+                "build": "cd examples/docs && yarn build",
+                "start": "cd examples/docs && yarn start",
+                "dev": "cd examples/docs && yarn start",
+                "serve": "cd examples/docs && yarn serve",
+                "watch": "cd packages/core && npx jest --watch --runInBand",
+                "cov": "cd packages/core && npx jest --coverage",
+                "ls": "cd packages/core && npm publish --dry-run",
+                "tsup": "cd packages/core && yarn tsup",
+                "vers": "yarn changeset version",
+                "pub": "yarn tsup && yarn changeset publish"
+        },
+        "dependencies": {
+                "react": "18.2.0",
+                "react-dom": "18.2.0",
+                "typescript": "5.3.3"
+        },
+        "devDependencies": {
+                "@changesets/cli": "2.26.2",
+                "jest": "29.3.1",
+                "tsup": "7.2.0",
+                "ts-jest": "29.0.3"
+        },
+        "engines": {
+                "node": ">=14"
+        },
+        "workspaces": [
+                "examples/*",
+                "packages/*"
+        ]
+}
